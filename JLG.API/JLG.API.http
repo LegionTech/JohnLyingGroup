@@ -1,0 +1,6 @@
+@JLG.API_HostAddress = http://localhost:5204
+
+GET {{JLG.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
