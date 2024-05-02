@@ -26,9 +26,9 @@ namespace JLG.BizLogics
       return _Todos;
     }
 
-    public Todo Get(int id)
+    public Todo? Get(int id)
     {
-      return _Todos.Single(x => x.Id == id);
+      return _Todos.SingleOrDefault(x => x.Id == id);
     }
 
     public void Add(Todo task)
