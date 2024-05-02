@@ -8,7 +8,7 @@ namespace JLG.BizLogics
   {
     public IEnumerable<Todo> GetList();
     public Todo Get(int id);
-    public Todo Add(Todo task);
+    public void Add(Todo task);
     public void Update(Todo task);
     public bool Delete(int id);
   }

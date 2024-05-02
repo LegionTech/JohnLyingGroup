@@ -7,10 +7,11 @@ namespace JLG.BizLogics
   public class TodoService: ITodoService
   {
     private List<Todo> _Todos = new List<Todo>();
-    private static int _IdCounter = 1;
+    private static int _IdCounter = 1; //index number for todo item
 
     public TodoService()
     {
+      //create a pre-existing todo list
       var t1 = new Todo() { Id = _IdCounter++, IsDone = false, Title = "Task AAA" };
       var t2 = new Todo() { Id = _IdCounter++, IsDone = false, Title = "Task BBB" };
       var t3 = new Todo() { Id = _IdCounter++, IsDone = false, Title = "Task CCC" };
@@ -30,13 +31,11 @@ namespace JLG.BizLogics
       return _Todos.Single(x => x.Id == id);
     }
 
-    public Todo Add(Todo task)
+    public void Add(Todo task)
     {
-      task.Id = _IdCounter++;
+      task.Id = _IdCounter++; //fill the Id
       
       _Todos.Add(task);
-
-      return task;    
     }
 
     public void Update(Todo task)
