@@ -38,12 +38,7 @@ namespace JLG.API.Controllers
     [HttpPut]
     public ActionResult Add([FromBody] Todo item)
     {
-      var updateItem = _todoService.Add(item);
-
-      if (updateItem == null)
-      {
-        return NotFound();
-      }
+      _todoService.Add(item);
 
       return Ok();
     }
