@@ -1,4 +1,5 @@
 using JLG.BizLogics;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 var policyName = "corsapp";
 // Add services to the container.
+
+Console.OutputEncoding = Encoding.UTF8;
+
+Console.WriteLine($"FINVAL Program builder.Environment.EnvironmentName: {builder.Environment.EnvironmentName}");
 
 builder.Services.AddControllers();
 
